@@ -11,8 +11,8 @@ class Board extends React.Component<IProps, IState>{
   }
 
     render(){
-      const rows = [0,1,2,3,4,5,6,7,8];
-      const columns = [0,1,2,3,4,5,6,7,8];
+      const rows = [1,2,3,4,5,6,7,8,9];
+      const columns = [1,2,3,4,5,6,7,8,9];
 
       return(
         <div className="board-container">

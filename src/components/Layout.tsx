@@ -12,12 +12,20 @@ interface IProps {
 class Layout extends React.Component{
   render(){
     return(
-      <div className="App">
-        <div className="title">
-          <h1> Sudoku Board </h1>
-        </div>
-        <Board />
-        <StartButton />
+      <div className="layout">
+        <header> 
+          <div className="title">
+            <h1> Sudoku Board </h1>
+          </div> 
+        </header>
+        <nav> Nav</nav>
+        <main>
+          <div className="game-container">
+            <Board />
+            <StartButton />
+          </div>
+        </main>
+        <footer>Footer</footer>
       </div>
     );
   }

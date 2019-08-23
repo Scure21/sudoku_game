@@ -1,11 +1,40 @@
 /* Colors */
-.App {
-  margin: 1rem;
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif; }
 
+.layout {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 150px auto 100px;
+  grid-template-columns: minmax(200px, 3fr) 9fr;
+  grid-template-areas: "header header" "nav    content" "nav    footer"; }
+  .layout header {
+    grid-area: header;
+    border: 1px solid black; }
+  .layout nav {
+    grid-area: nav;
+    border: 1px solid black; }
+  .layout footer {
+    border: 1px solid black; }
+
+.game-container {
+  margin: 30px auto; }
+
 .title {
-  margin: 0 auto;
   text-align: center; }
+
+#1-1 {
+  border-left: solid #00171F;
+  border-top: solid #00171F;
+  border-right: 1px solid #00171F;
+  border-bottom: 1px solid #00171F; }
 
 .square {
   text-align: center;
@@ -14,19 +43,14 @@
   color: #FFFFFF;
   background-color: #ABDAE1; }
   .square:hover {
-    background-color: #A3B9C9; }
+    background-color: #A3B9C9;
+    cursor: pointer; }
 
 .on {
   background-color: #A09CB0; }
 
 .off {
   background-color: #ABDAE1; }
-
-.square-0-0 {
-  border-left: solid #00171F;
-  border-top: solid #00171F;
-  border-right: 1px solid #00171F;
-  border-bottom: 1px solid #00171F; }
 
 .square-0-1 {
   border-top: solid #00171F;
@@ -368,10 +392,18 @@
   display: grid;
   width: 610px;
   margin: 0 auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square" "square square square square square square square square square";
+  grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end col6-start] 1fr [col6-end col7-start] 1fr [col6-end col7-start] 1fr [col7-end col8-start] 1fr;
+  grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end row3-start] 1fr [row3-end row4-start] 1fr [row4-end row5-start] 1fr [row5-end row6-start] 1fr [row6-end row7-start] 1fr [row6-end row7-start] 1fr [row7-end row8-start] 1fr;
+  grid-template-areas: "subgrid subgrid subgrid" "subgrid subgrid subgrid" "subgrid subgrid subgrid";
   justify-content: center; }
+
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr [sub-grid-col]);
+  grid-template-rows: repeat(3, 1fr [sub-grid-row]);
+  border: solid black;
+  background-color: red;
+  grid-gap: 5px; }
 
 .button-container {
   margin-top: 15px; }
