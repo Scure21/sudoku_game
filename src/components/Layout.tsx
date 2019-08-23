@@ -15,7 +15,7 @@ class Layout extends React.Component{
       <div className="layout">
         <header> 
           <div className="title">
-            <h1> Sudoku Board </h1>
+            <h1> Sudoku </h1>
           </div> 
         </header>
         <nav> Nav</nav>
@@ -25,7 +25,11 @@ class Layout extends React.Component{
             <StartButton />
           </div>
         </main>
-        <footer>Footer</footer>
+        <footer>
+          <div className="footer-text">
+            Made by Stephanie Cure
+          </div>
+        </footer>
       </div>
     );
   }

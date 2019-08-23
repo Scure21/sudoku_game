@@ -25,24 +25,29 @@ html, body {
 
   header {
     grid-area: header;
-    border: 1px solid black;
+    background-color: $light-blue;
+    .title {
+      margin: 57px auto;
+      text-align: center;
+    }
   }
 
   nav {
     grid-area: nav;
-    border: 1px solid black;
+    background-color: $blue;
   }
 
   footer {
-    border: 1px solid black;
+    background-color: $yellow;
+    .footer-text {
+      margin: 40px auto;
+      text-align: center;
+    }
   }
+
 }
 .game-container {
   margin: 30px auto;
-}
-
-.title {
-  text-align: center;
 }
 
 @import "squares.scss";

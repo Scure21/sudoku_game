@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b92a409a6803c5e1c368";
+/******/ 	var hotCurrentHash = "938ed9a4559fbb69a0de";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -26763,13 +26763,14 @@ var Layout = (function (_super) {
         return (React.createElement("div", { className: "layout" },
             React.createElement("header", null,
                 React.createElement("div", { className: "title" },
-                    React.createElement("h1", null, " Sudoku Board "))),
+                    React.createElement("h1", null, " Sudoku "))),
             React.createElement("nav", null, " Nav"),
             React.createElement("main", null,
                 React.createElement("div", { className: "game-container" },
                     React.createElement(Board_1.default, null),
                     React.createElement(StartButton_1.default, null))),
-            React.createElement("footer", null, "Footer")));
+            React.createElement("footer", null,
+                React.createElement("div", { className: "footer-text" }, "Made by Stephanie Cure"))));
     };
     return Layout;
 }(React.Component));
