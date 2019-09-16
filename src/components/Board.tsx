@@ -1,5 +1,6 @@
 import * as React from "react";
 import Square from "./Square"
+import Subgrid from "./Subgrid"
 
 interface IState {}
 
@@ -17,11 +18,11 @@ class Board extends React.Component<IProps, IState>{
       return(
         <div className="board-container">
               {rows.map(row => columns.map(col => <Square value={row}
-              className="square"
-              id={`${row}-${col}`}
+              className={`square square-${row}-${col}`}
+              id={`s-${row}-${col}`}
               key={col}
               />))
-              }
+            }
         </div>
       );
     }

@@ -25,7 +25,29 @@ html, body {
 
   header {
     grid-area: header;
-    background-color: $light-blue;
+    background-color: $bright-blue;
+    // background: linear-gradient(146deg, #1da1f2, #f9f67b);
+    // background-size: 400% 400%;
+
+    // -webkit-animation: AnimationName 20s ease infinite;
+    // -moz-animation: AnimationName 20s ease infinite;
+    // animation: AnimationName 20s ease infinite;
+
+    // @-webkit-keyframes AnimationName {
+    //     0%{background-position:0% 48%}
+    //     50%{background-position:100% 53%}
+    //     100%{background-position:0% 48%}
+    // }
+    // @-moz-keyframes AnimationName {
+    //     0%{background-position:0% 48%}
+    //     50%{background-position:100% 53%}
+    //     100%{background-position:0% 48%}
+    // }
+    // @keyframes AnimationName { 
+    //     0%{background-position:0% 48%}
+    //     50%{background-position:100% 53%}
+    //     100%{background-position:0% 48%}
+    // }
     .title {
       margin: 57px auto;
       text-align: center;
@@ -56,6 +78,7 @@ html, body {
   display: grid;
   width: 610px;
   margin: 0 auto;
+  grid-gap: 2px;
   grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end col6-start] 1fr [col6-end col7-start] 1fr [col6-end col7-start] 1fr [col7-end col8-start] 1fr;
   grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end row3-start] 1fr [row3-end row4-start] 1fr [row4-end row5-start] 1fr [row5-end row6-start] 1fr [row6-end row7-start] 1fr [row6-end row7-start] 1fr [row7-end row8-start] 1fr;
   grid-template-areas:

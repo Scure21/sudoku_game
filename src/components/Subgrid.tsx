@@ -4,9 +4,9 @@ import Square from "./Square"
 interface IState {}
 
 interface IProps {
-    value: number;
-    className: string;
-    id: string;
+    value?: number;
+    className?: string;
+    id?: string;
     onClick?: () => void;
   }
 
@@ -16,17 +16,17 @@ class Subgrid extends React.Component<IProps, IState>{
   }
 
     render(){
-      const rows = [1,2,3,4,5,6,7,8,9];
-      const columns = [1,2,3,4,5,6,7,8,9];
+      const rows = [1,2,3];
+      const columns = [1,2,3];
 
       return(
         <div className="subgrid">
-            {rows.map(row => columns.map(col =>
-                <Square value={row}
-                    className="square"
-                    id={`${row}-${col}`}
-                    key={col}
-                />))}
+            {rows.map(row => columns.map(col => {
+              console.log(row, col)
+              let el = document.getElementById(`${row}-${col}`);
+              console.log(el);
+              // el.className += `subgrid-${1}`
+            } ))}
         </div>
       );
     }
