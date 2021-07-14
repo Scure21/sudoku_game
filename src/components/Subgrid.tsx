@@ -22,9 +22,7 @@ class Subgrid extends React.Component<IProps, IState>{
       return(
         <div className="subgrid">
             {rows.map(row => columns.map(col => {
-              console.log(row, col)
               let el = document.getElementById(`${row}-${col}`);
-              console.log(el);
               el.className += `subgrid-${1}`
             } ))}
         </div>
